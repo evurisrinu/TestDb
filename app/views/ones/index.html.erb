@@ -1,0 +1,27 @@
+<h1>Listing ones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ones.each do |one| %>
+      <tr>
+        <td><%= one.name %></td>
+        <td><%= link_to 'Show', one %></td>
+        <td><%= link_to 'Edit', edit_one_path(one) %></td>
+        <td><%= link_to 'Destroy', one, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New One', new_one_path %>

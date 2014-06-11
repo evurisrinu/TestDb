@@ -1,0 +1,27 @@
+<h1>Listing nineteens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nineteens.each do |nineteen| %>
+      <tr>
+        <td><%= nineteen.name %></td>
+        <td><%= link_to 'Show', nineteen %></td>
+        <td><%= link_to 'Edit', edit_nineteen_path(nineteen) %></td>
+        <td><%= link_to 'Destroy', nineteen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nineteen', new_nineteen_path %>

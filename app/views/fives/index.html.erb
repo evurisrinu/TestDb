@@ -1,0 +1,27 @@
+<h1>Listing fives</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fives.each do |fife| %>
+      <tr>
+        <td><%= fife.name %></td>
+        <td><%= link_to 'Show', fife %></td>
+        <td><%= link_to 'Edit', edit_fife_path(fife) %></td>
+        <td><%= link_to 'Destroy', fife, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Five', new_fife_path %>

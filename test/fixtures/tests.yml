@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  one: 
+  two: 
+  three: 
+  four: 
+  five: 
+  six: 
+  seven: 
+  eight: 
+  nine: 
+  ten: MyString
+
+two:
+  name: 
+  one: 
+  two: 
+  three: 
+  four: 
+  five: 
+  six: 
+  seven: 
+  eight: 
+  nine: 
+  ten: MyString

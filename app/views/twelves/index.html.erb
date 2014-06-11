@@ -1,0 +1,27 @@
+<h1>Listing twelves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @twelves.each do |twelf| %>
+      <tr>
+        <td><%= twelf.name %></td>
+        <td><%= link_to 'Show', twelf %></td>
+        <td><%= link_to 'Edit', edit_twelf_path(twelf) %></td>
+        <td><%= link_to 'Destroy', twelf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Twelve', new_twelf_path %>

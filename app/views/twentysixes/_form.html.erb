@@ -1,0 +1,21 @@
+<%= form_for(@twentysix) do |f| %>
+  <% if @twentysix.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@twentysix.errors.count, "error") %> prohibited this twentysix from being saved:</h2>
+
+      <ul>
+      <% @twentysix.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

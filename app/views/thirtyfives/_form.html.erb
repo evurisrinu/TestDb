@@ -1,0 +1,21 @@
+<%= form_for(@thirtyfife) do |f| %>
+  <% if @thirtyfife.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@thirtyfife.errors.count, "error") %> prohibited this thirtyfife from being saved:</h2>
+
+      <ul>
+      <% @thirtyfife.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

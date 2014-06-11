@@ -1,0 +1,2 @@
+module TwentytwosHelper
+end

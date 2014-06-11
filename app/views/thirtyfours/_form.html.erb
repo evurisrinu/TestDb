@@ -1,0 +1,21 @@
+<%= form_for(@thirtyfour) do |f| %>
+  <% if @thirtyfour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@thirtyfour.errors.count, "error") %> prohibited this thirtyfour from being saved:</h2>
+
+      <ul>
+      <% @thirtyfour.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Listing fourties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fourties.each do |fourty| %>
+      <tr>
+        <td><%= fourty.name %></td>
+        <td><%= link_to 'Show', fourty %></td>
+        <td><%= link_to 'Edit', edit_fourty_path(fourty) %></td>
+        <td><%= link_to 'Destroy', fourty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fourty', new_fourty_path %>

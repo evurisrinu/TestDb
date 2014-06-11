@@ -1,0 +1,27 @@
+<h1>Listing thirtyeights</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @thirtyeights.each do |thirtyeight| %>
+      <tr>
+        <td><%= thirtyeight.name %></td>
+        <td><%= link_to 'Show', thirtyeight %></td>
+        <td><%= link_to 'Edit', edit_thirtyeight_path(thirtyeight) %></td>
+        <td><%= link_to 'Destroy', thirtyeight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Thirtyeight', new_thirtyeight_path %>

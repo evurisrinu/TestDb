@@ -1,0 +1,47 @@
+<h1>Listing tests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>One</th>
+      <th>Two</th>
+      <th>Three</th>
+      <th>Four</th>
+      <th>Five</th>
+      <th>Six</th>
+      <th>Seven</th>
+      <th>Eight</th>
+      <th>Nine</th>
+      <th>Ten</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tests.each do |test| %>
+      <tr>
+        <td><%= test.name %></td>
+        <td><%= test.one %></td>
+        <td><%= test.two %></td>
+        <td><%= test.three %></td>
+        <td><%= test.four %></td>
+        <td><%= test.five %></td>
+        <td><%= test.six %></td>
+        <td><%= test.seven %></td>
+        <td><%= test.eight %></td>
+        <td><%= test.nine %></td>
+        <td><%= test.ten %></td>
+        <td><%= link_to 'Show', test %></td>
+        <td><%= link_to 'Edit', edit_test_path(test) %></td>
+        <td><%= link_to 'Destroy', test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test', new_test_path %>

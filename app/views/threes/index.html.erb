@@ -1,0 +1,27 @@
+<h1>Listing threes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @threes.each do |three| %>
+      <tr>
+        <td><%= three.name %></td>
+        <td><%= link_to 'Show', three %></td>
+        <td><%= link_to 'Edit', edit_three_path(three) %></td>
+        <td><%= link_to 'Destroy', three, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Three', new_three_path %>

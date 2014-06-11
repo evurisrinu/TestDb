@@ -1,0 +1,61 @@
+<%= form_for(@test) do |f| %>
+  <% if @test.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@test.errors.count, "error") %> prohibited this test from being saved:</h2>
+
+      <ul>
+      <% @test.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :one %><br>
+    <%= f.text_field :one %>
+  </div>
+  <div class="field">
+    <%= f.label :two %><br>
+    <%= f.text_field :two %>
+  </div>
+  <div class="field">
+    <%= f.label :three %><br>
+    <%= f.text_field :three %>
+  </div>
+  <div class="field">
+    <%= f.label :four %><br>
+    <%= f.text_field :four %>
+  </div>
+  <div class="field">
+    <%= f.label :five %><br>
+    <%= f.text_field :five %>
+  </div>
+  <div class="field">
+    <%= f.label :six %><br>
+    <%= f.text_field :six %>
+  </div>
+  <div class="field">
+    <%= f.label :seven %><br>
+    <%= f.text_field :seven %>
+  </div>
+  <div class="field">
+    <%= f.label :eight %><br>
+    <%= f.text_field :eight %>
+  </div>
+  <div class="field">
+    <%= f.label :nine %><br>
+    <%= f.text_field :nine %>
+  </div>
+  <div class="field">
+    <%= f.label :ten %><br>
+    <%= f.text_field :ten %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

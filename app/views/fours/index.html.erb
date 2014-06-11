@@ -1,0 +1,27 @@
+<h1>Listing fours</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fours.each do |four| %>
+      <tr>
+        <td><%= four.name %></td>
+        <td><%= link_to 'Show', four %></td>
+        <td><%= link_to 'Edit', edit_four_path(four) %></td>
+        <td><%= link_to 'Destroy', four, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Four', new_four_path %>
